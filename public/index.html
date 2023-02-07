@@ -7,19 +7,29 @@
     <body>
         <div class = "container">
             <h1>Login</h1>
-            <form method = "post">
+            <form method = "post" action = "#">
                 <div class = "field">
-                    <input type = "text" required>
-                    <span></span>
-                    <label>Username</label>
+                    <div class = "input-field email-field">
+                        <input type = "email" title = "e.g. example@email.com" required>
+                        <span></span>
+                        <label>Username</label>
+                    </div>    
                 </div>
+
                 <div class = "field">
-                    <input type = "password" required>
-                    <span></span>
-                    <label>Password</label>
+                    <div class = "input-field pass-field">
+                        <input type = "password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                            title = "Password should be a minimum of 8 characters, alphanumeric with at least one special character."
+                            required>
+                        <span></span>
+                        <label>Password</label>
+                    </div>
                 </div>
+
                 <div class = "forgot">Forgot Password?</div>
-                <input type = "submit" value = "Login">
+
+                <input type = "submit" value = "Login" >
+
                 <div class = "signup">
                     Create an Account. <a href="#">Signup</a>
                 </div>
