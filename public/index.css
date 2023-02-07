@@ -52,7 +52,7 @@ form .field{
 
 .field label{
     position: absolute;
-    top: -5px;
+    top: 50%;
     left: 5px;
     color: #def2f1;
     transform: translateY(-50%);
@@ -69,6 +69,17 @@ form .field{
     height: 2px;
     background: #def2f1;
     transition: .5s;
+}
+
+.field input:focus ~ label,
+.field input:valid ~ label{
+    top: -5px;
+    color: #2b7a78;
+}
+
+.field input:focus ~ span,
+.field input:valid ~ span::before{
+    width: 100%;
 }
 
 .forgot{
